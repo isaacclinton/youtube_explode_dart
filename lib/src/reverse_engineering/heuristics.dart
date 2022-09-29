@@ -26,6 +26,10 @@ extension VideoQualityUtil on VideoQuality {
     }
     label = label.toLowerCase();
 
+    if (label.startsWith('1440')) {
+      return VideoQuality.high1440;
+    }
+
     if (label.startsWith('144')) {
       return VideoQuality.low144;
     }
@@ -48,10 +52,6 @@ extension VideoQualityUtil on VideoQuality {
 
     if (label.startsWith('1080')) {
       return VideoQuality.high1080;
-    }
-
-    if (label.startsWith('1440')) {
-      return VideoQuality.high1440;
     }
 
     if (label.startsWith('2160')) {
